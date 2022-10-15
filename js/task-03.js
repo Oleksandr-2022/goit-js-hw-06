@@ -21,8 +21,10 @@ const element = images.map(({ url, alt }) => {
     'beforeend',
     `<li class = 'gallery__item'><img class = 'gallery__img' src = ${url} alt = ${alt}></li>`
   );
+  images.join(' ');
+  return images;
 });
-galleryList.append(...element);
+// galleryList.append(...element);
 
 
 
