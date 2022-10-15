@@ -1,14 +1,24 @@
-const categoriesEl = document.querySelectorAll('li.item');
-console.log(`Number of categories: ${categoriesEl.length}`);
+// const categoriesEl = document.querySelectorAll('li.item');
+// console.log(`Number of categories: ${categoriesEl.length}`);
 
-const categoriesArray = [...categoriesEl];
-const categoryName = categoriesArray.map(categories => categories.firstElementChild.textContent);
-const subcategoryLength = categoriesArray.map(categories => categories.children[1].children.length);
+// const categoriesArray = [...categoriesEl];
+// const categoryName = categoriesArray.map(categories => categories.firstElementChild.textContent);
+// const subcategoryLength = categoriesArray.map(categories => categories.children[1].children.length);
 
-for (let i = 0; i < categoriesArray.length; i += 1) {
-  console.log(`Category: ${categoryName[i]}\nElements: ${subcategoryLength[i]}`);
-}
+// for (let i = 0; i < categoriesArray.length; i += 1) {
+//   console.log(`Category: ${categoryName[i]}\nElements: ${subcategoryLength[i]}`);
+// }
 
+
+const categoriesEl = document.querySelectorAll('.item')
+
+console.log(`Number of categoriesEl: ${categoriesEl.length}`)
+console.log(' ')
+categoriesEl.forEach((element) => {
+  console.log('Category:', element.firstElementChild.textContent)
+  console.log('Elements:', element.lastElementChild.children.length)
+  console.log(' ')
+})
 
 
 
